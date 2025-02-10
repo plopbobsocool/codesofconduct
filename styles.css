@@ -91,14 +91,3 @@ header ul li a {
   float: right;
   cursor: pointer;
 }
-
-/* Codes of Conduct Page */
-#conduct {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#conduct ol {
-  text-align: left;
-  display: inline-block;
-}
