@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-    </head>
-    <body>
-        <div class="section1">
-            <div class="text">SIGMAITSOLUTIONS</div>
-        </div>
-        <div class="section2">
-            <div class="text">CODESOFCONDUCT</div>
-        </div>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sigma IT Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Sigma IT Solutions</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" id="loginLink">Worker Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Parallax Sections -->
+  <section id="home" class="parallax">
+    <div class="content">
+      <h1>Welcome to Sigma IT Solutions</h1>
+      <p>Innovative IT solutions for a smarter future.</p>
+    </div>
+  </section>
+
+  <section id="about" class="parallax">
+    <div class="content">
+      <h2>About Us</h2>
+      <p>We are a UK-based IT company specializing in software development, cybersecurity, and cloud solutions.</p>
+    </div>
+  </section>
+
+  <section id="services" class="parallax">
+    <div class="content">
+      <h2>Our Services</h2>
+      <p>Custom software, IT consulting, and managed services tailored to your needs.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="parallax">
+    <div class="content">
+      <h2>Contact Us</h2>
+      <p>Email: info@sigmaitsolutions.co.uk | Phone: +44 1234 567890</p>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Worker Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
