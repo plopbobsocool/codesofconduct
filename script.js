@@ -1,13 +1,4 @@
-$(document).ready(function() {
-  // Initialize Stellar.js for parallax effect
-  $.stellar({
-    horizontalScrolling: false,  // Disable horizontal scrolling
-    verticalOffset: 40,          // Set the vertical offset
-    responsive: true             // Enable responsive design
-  });
-});
-
-// Login Modal (unchanged)
+// Login Modal
 const loginLink = document.getElementById('loginLink');
 const modal = document.getElementById('loginModal');
 const closeBtn = document.querySelector('.close');
@@ -26,16 +17,34 @@ window.addEventListener('click', (event) => {
   }
 });
 
-// Login Form Submission (unchanged)
+// Login Form Submission
 document.getElementById('loginForm').addEventListener('submit', (e) => {
   e.preventDefault();
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
+  // Example: Hashing password for demo purposes
+  const hashedPassword = hashPassword(password);
+
   // Simulate login (for demo purposes)
-  if (username === 'worker' && password === 'Password123!') {
+  if (username === 'worker' && hashedPassword === 'hashedPassword123!') {
+    // Save the login state in localStorage
+    localStorage.setItem('isLoggedIn', 'true');
     window.location.href = 'conduct.html';
   } else {
     alert('Invalid credentials. Please try again.');
   }
 });
+
+// Hashing Function (for demo purposes, replace with real hashing in production)
+function hashPassword(password) {
+  return btoa(password);  // Base64 encode as a placeholder (this is NOT secure for production)
+}
+
+// Check if the user is logged in when accessing a protected page
+if (window.location.pathname === '/conduct.html') {
+  if (localStorage.getItem('isLoggedIn') !== 'true') {
+    // Redirect to login page if not logged in
+    window.location.href = 'index.html';
+  }
+}
